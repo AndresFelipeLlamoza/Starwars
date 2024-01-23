@@ -2,24 +2,36 @@
     font-family: wotfont;
     src: url(../resources/fonts/Anton-Regular.ttf)
   }
-.nav{
-    font-family: wotfont;
-    background-color: rgb(41, 41, 41);
-    color: white
+  /****************************************************************NAVBAR*****************************************************/
+#nav{
+  font-family: wotfont;
+  background-color: rgb(41, 41, 41);
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 } 
 .navcontainer{
   display:flex;
   gap: 25px;
-  color: white
-} 
+  color: white;
+  
+}
+.loadinGif{
+  display: flex;
+  justify-content: center;
+  padding: 55px;
+}
+/****************************************************************BODY********************************************************/ 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
+/*************************************************************FOOTER********************************************************/ 
 .footerContainer{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: rgb(41, 41, 41);
   color: white;
@@ -55,6 +67,7 @@ body {
   border-radius: 10px;
   padding: 3px
 }
+/***************************************************************TANKS LIST******************************************************/ 
 
 .tanksCardsContainer{
   display:flex;
@@ -75,4 +88,22 @@ body {
   background: rgb(0,0,5);
   background: linear-gradient(90deg, rgba(0,0,5,1) 0%, rgba(70,73,79,1) 35%, rgba(62,63,69,1) 100%); 
   color:white
+}
+.cardBtn{
+  background: rgb(253,29,29);
+  background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 50%, rgba(253,29,29,1) 100%);
+  border-color: transparent
+}
+/*.cardBtn:hover{
+  background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 50%, rgba(253,29,29,1) 100%);
+  transition: all .5s;
+  transform: scale(1.1)
+}*/
+
+/*************************************************************PLAYERS**********************************************************/
+.searchPlayerContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  gap: 25px;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import Cards from './components/cards';
+import TankCards from './components/tankCards';
 function tanks() {
     
     return (
         <div>
             <Navbar/>
-            <Cards/>
+            <TankCards/>
             <Footer/>
         </div>
     );

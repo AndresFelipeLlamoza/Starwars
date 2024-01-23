@@ -3,14 +3,18 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import useTanks from '../../hooks/useTanks';
-function Cards() {
+import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import images from '../../resources/images/images';
+function TankCards() {
   const {loading, error, vehicles} = useTanks()
   return (
     <div className="tanksBody">
+      <br></br><br></br><br></br>
       <h1 style={{padding: '20px', color: 'white'}} className='tanksTitle'> Tanks list</h1>
       <div className='tanksCardsContainer'>
         {loading ? (
-          <h2>Loading data...</h2>
+          <div className="loadinGif"><img src={images.dataloading}></img></div>
         ):error ? (
           <h2>Error: {error.message}</h2>
         ):(
@@ -26,7 +30,7 @@ function Cards() {
                   
                   
                 </Card.Text>
-                <Button variant="primary">More information</Button>
+                <Button className="cardBtn">To tank information <FontAwesomeIcon icon={faAnglesRight} /></Button>
               </Card.Body>
             </Card>
           ))
@@ -36,4 +40,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default TankCards;
